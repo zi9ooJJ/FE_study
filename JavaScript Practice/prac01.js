@@ -20,6 +20,6 @@ rl.on("line", function (x) {
     const cardNum = input[1].split(' '); // 카드에 적힌 숫자들을 쪼갬.
     const likeNum = input[2] // 좋아하는 숫자 카드 변수에 저장.
     // filter를 이용하여 cardNum을 순회하며 likeNum과 일치하는 값을 새로운 배열로 만들어 리턴한 후 배열의 길이로 카드의 수 count.
-    let count = cardNum.filter(e => likeNum === e).length;
-    console.log(count);
+    let likecount = cardNum.filter(e => likeNum === e).length;
+    console.log(likecount);
 });
