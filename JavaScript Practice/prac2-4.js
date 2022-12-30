@@ -11,7 +11,7 @@ rl.on("line", function (x) {
     input = x;
     rl.close();
 }).on("close", function () {
-    // '-'을 기준으로 나누고 숫자열로 변환 후 변수에 저장
+    // '-'을 기준으로 나누고 숫자열로 변환 (구조분해할당 활용하여 변수 저장)
     const [y, m ,d] = input.split('-').map(n => Number(n));
     // 윤년 구하기
     const leapYear = (y % 4 === 0 && y % 100 !== 0) || (y % 400 === 0);
@@ -26,7 +26,7 @@ rl.on("line", function (x) {
         if (day29) return 29;
         return 28;
     })();
-    // 연,월,일 참인 조건 정리
+    // 년,월,일 참인 조건 정리
     const realYear = y >= 2000 && y <= 2099;
     const realMonth = m >= 1 && m <= 12;
     const realDay = d >= 1 && d <= getDay;
